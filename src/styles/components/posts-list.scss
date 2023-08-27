@@ -1,0 +1,30 @@
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__empty-message {
+    grid-column: 1/-1;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .my-loader {
+    grid-column: 1/-1;
+    padding: 20px;
+  }
+
+  .error-text {
+    grid-column: 1/-1;
+  }
+}

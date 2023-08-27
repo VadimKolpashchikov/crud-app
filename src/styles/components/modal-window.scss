@@ -1,0 +1,118 @@
+.modal-window {
+  display: none;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  background-color: white;
+  color: #272727;
+
+  @media (max-width: 575px) {
+    max-width: 360px;
+    padding: 30px 20px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    @media (max-width: 575px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .input {
+    width: 100%;
+    height: 54px;
+    margin-top: 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background: #e7e7e7;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: 1px solid transparent;
+    transition: 0.3s outline;
+
+    &:hover {
+      outline: 1px solid rgba(50, 50, 50, 0.5);
+    }
+
+    &:focus-visible,
+    &:focus,
+    &:active {
+      outline: 1px solid #323232;
+    }
+
+    @media (max-width: 575px) {
+      height: 48px;
+      font-size: 15px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 575px) {
+      gap: 10px;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+      @media (max-width: 575px) {
+      }
+    }
+
+    .textarea {
+      padding: 10px;
+      height: 220px;
+      resize: none;
+      @media (max-width: 575px) {
+        height: 200px;
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 160px;
+    width: 100%;
+    min-height: 48px;
+    margin: 10px auto 0;
+    background-color: #2dc010;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s all;
+
+    @media (min-width: 992px) {
+      &:not(:disabled):hover {
+        opacity: 0.8;
+      }
+    }
+
+    &:disabled {
+      filter: grayscale(1);
+      cursor: default;
+    }
+  }
+}
